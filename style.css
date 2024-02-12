@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 *,
@@ -40,13 +39,14 @@ body {
 
 .btn-primary {
     color: #fff;
-    background: #16a083;
+    background: #a20000;
 
 }
 
 
-
 /* ############## navbar styling ############ */
+
+
 /* for desktop mode */
 
 .navbar input[type='checkbox'],
@@ -63,6 +63,7 @@ body {
     color: #000;
     opacity: 0.85;
     z-index: 999;
+
 }
 
 .navbar-container {
@@ -83,21 +84,19 @@ body {
     font-size: 1.5rem;
 }
 
-.logo {
-    order: 1;
-    font-size: 2.5rem;
-    color: #000000;
+.logo img {
+    width: 16.4%;
 }
 
 .navbar a {
-    color: #444;
+    color: #a20000;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.4s ease-in-out;
 }
 
 .navbar a:hover {
-    color: #117964;
+    color: #028700;
 }
 
 
@@ -114,8 +113,9 @@ body {
 
 /* ########### show-case styling ######### */
 .showcase-area {
-    height: 50vh;
-    background: linear-gradient(rgb(240, 240, 240, 1.44), rgb(255, 255, 255, 0.336)), url("img/header-image2.jpg");
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgb(240, 240, 240, 1.44), rgba(0, 0, 0, 0.555)), url("img2/header-image.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -130,9 +130,20 @@ body {
     font-size: 1.6rem;
 }
 
+.showcase-container p {
+    text-align: center;
+    color: #fff;
+}
+
+.showcase-container a:hover {
+    background-color: #028700;
+    transition: 0.5s ease-in;
+}
+
 .main-title {
     padding-top: 80px;
     margin-bottom: -15px;
+    color: #fff;
 }
 
 
@@ -170,6 +181,10 @@ body {
     padding: 30px;
     transform: translate(150%);
     animation: about-img-animation 1s ease-in-out forwards;
+}
+
+.about-img img {
+    border-radius: 15px;
 }
 
 @keyframes about-img-animation {
@@ -270,7 +285,7 @@ body {
 }
 
 .img-content a:hover {
-    background-color: #00ffd0d8;
+    background-color: #028700;
     transition: 0.5s ease-in;
 }
 
@@ -461,17 +476,123 @@ body {
     margin-bottom: 1rem;
 }
 
-.form-container a{
+.form-container a {
     font-size: 1.2rem;
 }
 
 
 
-#footer h2{
+#footer h2 {
     text-align: center;
     font-size: 2rem;
     padding: 3rem;
     font-weight: 500;
     color: #fff;
-    background: rgb(65,65,65);
+    background: rgb(65, 65, 65);
+}
+
+
+/* ################ Media queries ############### */
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        height: 75px;
+    }
+
+    .navbar-container {
+        height: auto;
+
+    }
+
+    .navbar-container input[type='checkbox'] {
+        display: block;
+        position: absolute;
+        height: 32px;
+        width: 40px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    .navbar-container .hamburger-lines {
+        display: block;
+        height: 32px;
+        width: 40px;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333333;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar-container input[type='checkbox']:checked+.hamburger-lines .line1 {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .navbar-container input[type='checkbox']:checked+.hamburger-lines .line2 {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    .navbar-container input[type='checkbox']:checked+.hamburger-lines .line3 {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .navbar .menu-items {
+        padding-top: 100px;
+        background: #fff;
+        height: auto;
+        max-width: 300px;
+        transform: translateX(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+    }
+
+    .navbar .menu-items li {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .logo {
+        position: absolute;
+        top: 5px;
+        right: 5%;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .navbar-container input[type='checkbox']:checked~.menu-items {
+        transform: translate(0);
+    }
+
+}
+
+
+/* ############# Media queries 2 ############## */
+
+
+@media screen and (max-width: 500px) {
+
+
 }
