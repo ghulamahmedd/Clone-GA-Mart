@@ -540,16 +540,17 @@ body {
     }
 
     .navbar-container input[type='checkbox']:checked+.hamburger-lines .line1 {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(14px, 5px);
     }
 
     .navbar-container input[type='checkbox']:checked+.hamburger-lines .line2 {
         transform: translateX(-50%);
+        transition: ease-in-out 0.5s;
         opacity: 0;
     }
 
     .navbar-container input[type='checkbox']:checked+.hamburger-lines .line3 {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(14px, -5px);
     }
 
     .navbar .menu-items {
